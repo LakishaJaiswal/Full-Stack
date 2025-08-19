@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Banking UI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f6fa;
+    }
+
+    .banking-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .balance-card {
+      background: #e0f7fa;
+      color: #00796b;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 15px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .deposit-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .deposit-btn:hover {
+      background-color: #45a049;
+    }
+
+    .withdraw-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .withdraw-btn:hover {
+      background-color: #e53935;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .buttons {
+        flex-direction: column;
+      }
+
+      .buttons button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banking-container">
+    <div class="balance-card">
+      Balance: ₹10,000
+    </div>
+    <div class="buttons">
+      <button class="deposit-btn">Deposit</button>
+      <button class="withdraw-btn">Withdraw</button>
+    </div>
+  </div>
+
+</body>
+</html>
